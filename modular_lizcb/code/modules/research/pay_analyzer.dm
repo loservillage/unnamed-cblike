@@ -1,6 +1,7 @@
 /obj/machinery/rnd/destructive_analyzer/pay
 	name = "Bounti-ful destructive analyzer"
 	desc = "A destructive analyzer, that takes research items in exchange for money, help science, get paid!"
+	requires_console = FALSE
 
 /obj/machinery/rnd/destructive_analyzer/pay/Insert_Item(obj/item/O, mob/user)
 	if(user.a_intent != INTENT_HARM)
