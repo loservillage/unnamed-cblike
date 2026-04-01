@@ -202,7 +202,7 @@
 	if(needs_reservoir)
 		user.adjust_nutrition(-operations[OP_NUT_COST])
 	if(operations[OP_CASH] && !is_me && C.client)
-		SSeconomy.adjust_funds(user, operations[OP_CASH])
+		SSeconomy.adjust_funds(user, COINS_TO_CREDITS(operations[OP_CASH]))
 		new /obj/effect/temp_visual/floaty_thing/cash(get_turf(user), operations[OP_CASH])
 	if(heal_operations & DO_HURT_DAMAGE) // Needle pierce flesh, ow ow ow
 		if(affected_bodypart.receive_damage(hurt_brute * 1, sharpness = SHARP_NONE, wound_bonus = CANT_WOUND, damage_coverings = FALSE)) // as funny as it is to wound people with a suture, its buggy as fuck and breaks everything

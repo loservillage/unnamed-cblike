@@ -19,6 +19,6 @@
 			totalRSP += SSresearch.techweb_point_items[O.type][oough]
 		var/bigmoney = round(totalRSP / 40)
 		to_chat(user, span_notice("You add the [O.name] to the [src.name], earning you [bigmoney] for [totalRSP] points!"))
-		SSeconomy.adjust_funds(user, bigmoney, src)
+		SSeconomy.adjust_funds(user, COINS_TO_CREDITS(bigmoney), src)
 		loaded_item = null
 		qdel(O)

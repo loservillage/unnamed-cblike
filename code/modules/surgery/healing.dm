@@ -86,7 +86,7 @@
 		var/datum/surgery/healing/the_surgery = surgery
 		the_surgery.antispam = TRUE
 	to_chat(user, span_notice("You got [bigmoney] for surgery-ing all over [target]"))
-	SSeconomy.adjust_funds(user,bigmoney, src)
+	SSeconomy.adjust_funds(user, COINS_TO_CREDITS(bigmoney), src)
 	return TRUE
 
 /datum/surgery_step/heal/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
