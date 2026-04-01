@@ -34068,6 +34068,13 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"yfv" = (
+/obj/machinery/light,
+/obj/machinery/rnd/destructive_analyzer/pay,
+/turf/open/floor/plasteel/f13/vault_floor/purple/side{
+	dir = 1
+	},
+/area/f13/building)
 "yfI" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor4-old"
@@ -38622,7 +38629,7 @@ pLF
 pLF
 pLF
 pLF
-qAM
+yfv
 omO
 omO
 kvB

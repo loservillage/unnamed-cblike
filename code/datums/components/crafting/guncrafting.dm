@@ -349,6 +349,8 @@
 	if(istype(W,/obj/item/salvage))
 		var/obj/item/salvage/S = W
 		S.make_loot(user, get_turf(src))
+		SSeconomy.adjust_funds(user, COINS_TO_CREDITS(S.bounty), src)
+		to_chat(user, span_notice("You have been awarded [S.bounty] coins for your salvaging service!"))
 
 	if(istype(W,/obj/item/storage))
 		var/obj/item/storage/baggy = W
