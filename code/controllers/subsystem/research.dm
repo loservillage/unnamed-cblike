@@ -393,7 +393,8 @@ SUBSYSTEM_DEF(research)
 	return ..()
 
 /datum/controller/subsystem/research/fire()
-	var/list/bitcoins = list()
+	//Edit: Active rsr :/
+	/*var/list/bitcoins = list()
 	var/list/BOSbitcoins = list()
 	var/list/VAULTbitcoins = list()
 	if(multiserver_calculation)
@@ -431,7 +432,7 @@ SUBSYSTEM_DEF(research)
 	unknown_tech.add_point_list(bitcoins) //tbh these guys can get a fuckton of points, because it isn't even being used
 	followers_tech.add_point_list(bitcoins)
 
-	last_income = world.time
+	last_income = world.time*/
 
 /datum/controller/subsystem/research/proc/calculate_server_coefficient()	//Diminishing returns.
 	var/amt = servers.len
