@@ -478,7 +478,6 @@
 	other_delay = TEND_DELAY_OTHER
 	var/healmult = 1
 	var/nut_per_dmg = 5
-	var/cash = 0
 	switch(user.nutrition)
 		if(-INFINITY to NUTRITION_LEVEL_STARVING)
 			operations[OP_ERROR] = TOO_HUNGRY
@@ -491,13 +490,10 @@
 			healmult = 2
 		if(NUTRITION_LEVEL_FULL to NUTRITION_LEVEL_FAT)
 			healmult = 2.5
-			cash = 1
 		if(NUTRITION_LEVEL_FAT to (NUTRITION_LEVEL_FAT * 2))
 			healmult = 3
-			cash = 1
 		if((NUTRITION_LEVEL_FAT * 2) to INFINITY)
 			healmult = 4
-			cash = 2
 	switch(user.heal_reservoir)
 		if(-INFINITY to 1)
 			self_delay *= 1
@@ -514,17 +510,14 @@
 			self_delay *= 0.25
 			other_delay *= 0.25
 			nut_per_dmg *= 0.8
-			cash += 1
 		if(15 to 20)
 			self_delay *= 0.2
 			other_delay *= 0.2
 			nut_per_dmg *= 0.5
-			cash += 2
 		if(20 to INFINITY)
 			self_delay *= 0.1
 			other_delay *= 0.1
 			nut_per_dmg *= 0.5
-			cash += 3
 	switch(user.get_stat(STAT_INTELLIGENCE))
 		if(0, 1)
 			self_delay *= 3
@@ -586,7 +579,7 @@
 	else
 		DISABLE_BITFIELD(operations[OP_VALID_ACTIONS], DO_UNBLEED_WOUND)
 	operations[OP_NUT_COST] = nut_cost
-	operations[OP_CASH] = cash
+	operations[OP_CASH] = round(healmult)
 
 ///Override this proc for special post heal effects.
 /obj/item/stack/medical/proc/post_heal_effects(amount_healed, mob/living/carbon/healed_mob, mob/user)

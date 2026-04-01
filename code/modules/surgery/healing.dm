@@ -77,6 +77,7 @@
 		urhealedamt_bleed *= 0.55
 		umsg += " as best as you can while they have clothing on"
 		tmsg += " as best as they can while [target] has clothing on"
+	var/bigmoney = round((min(urhealedamt_brute, target.getBruteLoss()) + min(urhealedamt_burn, target.getFireLoss()) + min(urhealedamt_bleed, target.getBleedLoss()) / 5))
 	target.heal_bodypart_damage(urhealedamt_brute, urhealedamt_burn, bleed = urhealedamt_bleed)
 	display_results(user, target, span_notice("[umsg]."),
 		"[tmsg].",
@@ -84,6 +85,8 @@
 	if(istype(surgery, /datum/surgery/healing))
 		var/datum/surgery/healing/the_surgery = surgery
 		the_surgery.antispam = TRUE
+	to_chat(user, span_notice("You got [bigmoney] for surgery-ing all over [target]"))
+	SSeconomy.adjust_funds(user,bigmoney, src)
 	return TRUE
 
 /datum/surgery_step/heal/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
