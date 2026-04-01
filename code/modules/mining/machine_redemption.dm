@@ -250,6 +250,9 @@
 			if(points)
 				if(I)
 					I.mining_points += points
+					var/bigmoney = round(points / 3)
+					to_chat(M,span_notice("You have been awarded [bigmoney] for your efforts!"))
+					SSeconomy.adjust_funds(user, bigmoney, src)
 					points = 0
 				else
 					to_chat(usr, span_warning("No ID detected."))
