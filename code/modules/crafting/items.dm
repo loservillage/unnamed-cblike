@@ -254,6 +254,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	icon_state = "blueprint_empty"
 	w_class = WEIGHT_CLASS_NORMAL
 	var/list/Loot = list() //List of items
+	var/bounty = 10
 
 /obj/item/salvage/proc/make_loot(mob/user, place_to_put_it)
 	if(!place_to_put_it || !isturf(place_to_put_it))
@@ -270,6 +271,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	name = "Pre-Fall salvage"
 	desc = "Some Pre-Fall salvage, it could contain some useful materials if dissasembled using a workbench..."
 	icon_state = "salvage"
+	bounty = 20
 	Loot = list(/obj/item/stack/crafting/metalparts/five,
 				/obj/item/stack/crafting/metalparts/three,
 				/obj/item/stack/crafting/metalparts,
@@ -294,6 +296,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	desc = "A pile of ammo, twisted into calibers and diameters you've never heard of. It contains reloading materials if dissasembled using a workbench..."
 	icon_state = "salvage"
 	color = "#CC4444"
+	bounty = 10
 	Loot = list(/obj/item/stack/ore/blackpowder/ten,
 				/obj/item/stack/ore/smokelesspowder,
 				/obj/item/stack/ore/smokelesspowder,
@@ -311,6 +314,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	desc = "Some tools meshed together. It could contain working tools or other useful items if dissasembled using a workbench..."
 	icon_state = "toolsalvage"
 	color = "#44CC44"
+	bounty = 30
 	Loot = list(/obj/item/weldingtool/hightech,
 				/obj/item/crowbar/hightech,
 				/obj/item/crowbar/hightech,
@@ -326,6 +330,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	desc = "Some advanced Pre-Fall salvage, it could contain some useful materials if dissasembled using a workbench..."
 	icon_state = "goodsalvage"
 	color = "#4444CC"
+	bounty = 50
 	Loot = list(/obj/item/advanced_crafting_components/receiver,
 				/obj/item/advanced_crafting_components/assembly,
 				/obj/item/advanced_crafting_components/alloys,
