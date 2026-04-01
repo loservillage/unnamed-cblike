@@ -10,13 +10,13 @@
 		if(!user.transferItemToLoc(O, src))
 			to_chat(user, span_warning("\The [O] is stuck to your hand, you cannot put it in the [src.name]!"))
 			return
-		if(!techweb_point_items[O.type])
+		if(!SSresearch.techweb_point_items[O.type])
 			to_chat(user, span_warning("This thing is useless for research! I think..."))
 			return
-		SSresearch.science_tech.add_point_list(techweb_point_items[O.type])
+		SSresearch.science_tech.add_point_list(SSresearch.techweb_point_items[O.type])
 		var/totalRSP = 0
-		for(var/oough in techweb_point_items[O.type])
-			totalRSP += techweb_point_items[O.type][oough]
+		for(var/oough in SSresearch.techweb_point_items[O.type])
+			totalRSP += SSresearch.techweb_point_items[O.type][oough]
 		var/bigmoney = round(totalRSP / 40)
 		to_chat(user, span_notice("You add the [O.name] to the [src.name], earning you [bigmoney] for [totalRSP] points!"))
 		SSeconomy.adjust_funds(user, bigmoney, src)
