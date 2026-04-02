@@ -546,7 +546,7 @@
 	multiple_sprites = 2
 	caliber = list(CALIBER_3006)
 	ammo_type = /obj/item/ammo_casing/a3006
-	max_ammo = 30
+	max_ammo = 20
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_MEDIUM_BOX)
 	randomize_ammo_count = FALSE

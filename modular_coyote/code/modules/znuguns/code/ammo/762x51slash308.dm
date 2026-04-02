@@ -85,7 +85,7 @@
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/s308
 	caliber = list(CALIBER_308)
-	max_ammo = 20
+	max_ammo = 30
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SMALL_BOX)
 	randomize_ammo_count = FALSE
@@ -98,7 +98,7 @@
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/m308
 	caliber = list(CALIBER_308)
-	max_ammo = 20
+	max_ammo = 30
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SMALL_BOX)
 	randomize_ammo_count = FALSE

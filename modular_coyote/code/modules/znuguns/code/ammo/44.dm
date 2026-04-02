@@ -96,7 +96,7 @@
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/b44
 	caliber = list(CALIBER_44)
-	max_ammo = 60
+	max_ammo = 48
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SMALL_BOX)
 	randomize_ammo_count = FALSE
@@ -109,7 +109,7 @@
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/s44
 	caliber = list(CALIBER_44)
-	max_ammo = 60
+	max_ammo = 48
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SMALL_BOX)
 	randomize_ammo_count = FALSE
@@ -122,7 +122,7 @@
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/m44
 	caliber = list(CALIBER_44)
-	max_ammo = 60
+	max_ammo = 48
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SMALL_BOX)
 	randomize_ammo_count = FALSE
