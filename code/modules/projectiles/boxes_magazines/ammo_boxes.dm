@@ -16,6 +16,7 @@
 	caliber = list(CALIBER_SHOTGUN)
 	w_class = WEIGHT_CLASS_SMALL
 	randomize_ammo_count = FALSE
+	icon_state = "box"
 
 /obj/item/ammo_box/shotgun/slug
 	name = "Slug shotgun ammo box"
@@ -470,7 +471,7 @@
 	multiple_sprites = 2
 	caliber = list(CALIBER_556)
 	ammo_type = /obj/item/ammo_casing/a556
-	max_ammo = 50
+	max_ammo = 40
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
 	randomize_ammo_count = FALSE
@@ -525,7 +526,7 @@
 	multiple_sprites = 2
 	caliber = list(CALIBER_308)
 	ammo_type = /obj/item/ammo_casing/a308
-	max_ammo = 40
+	max_ammo = 30
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_MEDIUM_BOX)
 	randomize_ammo_count = FALSE
@@ -534,7 +535,7 @@
 	name = "bag with reloaded .308 bullets"
 	ammo_type = /obj/item/ammo_casing/a308/improvised
 	icon_state = "improvshotbag"
-	max_ammo = 40
+	max_ammo = 30
 	multiple_sprites = 3
 
 //7.62x51, .30-06
