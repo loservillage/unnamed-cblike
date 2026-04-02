@@ -58974,7 +58974,12 @@
 	color = "#A47449";
 	dir = 8
 	},
-/obj/machinery/autolathe/ammo,
+/obj/machinery/autolathe/ammo{
+	simple = 1;
+	basic = 1;
+	intermediate = 1;
+	advanced = 1
+	},
 /turf/open/floor/wood_common{
 	color = "#779999"
 	},
@@ -62453,9 +62458,14 @@
 	},
 /area/f13/wasteland/nash)
 "rAw" = (
-/obj/machinery/autolathe/ammo,
 /obj/item/stack/ore/blackpowder/fifty,
 /obj/item/stack/ore/blackpowder/fifty,
+/obj/machinery/autolathe/ammo{
+	simple = 1;
+	basic = 1;
+	intermediate = 1;
+	advanced = 1
+	},
 /turf/open/floor/wood_common{
 	color = "#779999"
 	},
